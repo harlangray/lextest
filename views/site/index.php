@@ -4,22 +4,7 @@
 
 $this->title = 'My Yii Application';
 
-$sharedConfig = [
-    'region'  => 'us-west-2',
-    'version' => 'latest'
-];
 
-// Create an SDK class used to share configuration across clients.
-$sdk = new Aws\Sdk($sharedConfig);
-
-// Create an Amazon S3 client using the shared configuration data.
-$s3Client = $sdk->createS3();
-
-$result = $s3Client->putObject([
-    'Bucket' => 'my-bucket',
-    'Key'    => 'my-key',
-    'Body'   => 'this is the body!'
-]);
 
 ?>
 <div class="site-index">
